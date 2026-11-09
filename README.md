@@ -1,39 +1,47 @@
-# Test Your Controller
+# Test Your Controller 🎮
 
-A lightweight, cross-platform desktop app for checking live game-controller input. It currently supports DualShock 4 and Xbox 360 wireless controllers, along with other controllers recognized by Pygame.
+**Give your gamepad a quick checkup—no boss fight required.**
 
-## Features
+Test Your Controller is a lightweight desktop app that shows live input from connected game controllers. Watch your sticks move, squeeze your triggers, tap your buttons, and see what your D-pad is reporting—all in one tidy window.
 
-- Detect and select connected controllers
-- View live left- and right-stick positions
-- Monitor trigger values, face and shoulder buttons, and D-pad input
-- Refresh the device list after connecting a controller
+> Built with Python, Tkinter, and Pygame. Currently supports DualShock 4 and Xbox 360 wireless controllers, as well as other controllers recognized by Pygame.
 
-## Requirements
+## What you can test
+
+- **Analog sticks:** See left and right stick positions update live, with normalized axis values.
+- **Triggers:** Track trigger input with percentage indicators.
+- **Buttons:** Check face buttons, shoulders, sticks, and other common controls.
+- **D-pad:** See reported directions at a glance.
+- **Connected devices:** Select a detected controller or refresh the device list after connecting one.
+
+## Get started
+
+### Requirements
 
 - Python 3
-- Tkinter, usually included with Python (some Linux distributions provide it as a separate package)
+- Tkinter (typically included with Python; some Linux distributions package it separately)
 - Pygame
 
-## Run
+Install Pygame if it is not already available:
 
-1. Connect your controller to your computer.
-2. Install Pygame if needed:
+```bash
+python -m pip install pygame
+```
 
-   ```bash
-   python -m pip install pygame
-   ```
+### Launch the tester
 
-3. Start the tester from the project directory:
+Connect your controller, then run this from the project directory:
 
-   ```bash
-   python Tester.py
-   ```
+```bash
+python Tester.py
+```
 
-4. Select your controller if necessary. If it was connected after the app started, click **REFRESH**.
+Choose your controller from the device list. If you connect it after the app opens, click **REFRESH** to scan again.
 
-The app updates controller input while it is open. Axis and button layouts can vary by device, so some controls may be reported differently depending on the controller and operating system.
+## A couple of controller quirks
+
+Controller layouts vary across models, drivers, and operating systems. Button names or trigger axes may not line up exactly with the labels shown in the app, and some devices may not report a D-pad as a hat switch. If an input looks unexpected, the controller may simply be speaking its own dialect.
 
 ## License
 
-This project is distributed under the MIT License. See [LICENSE](LICENSE).
+Released under the [MIT License](LICENSE).
